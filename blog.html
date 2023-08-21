@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>KQ CONSULTANCY</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+     #text-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .about-section {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+         /* Software section styles */
+         .software-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .software-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .software-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .software-name {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Potential Clients section styles */
+.potential-clients-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.potential-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+.potential-client:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+
+.potential-client {
+  width: 200px; /* Set a fixed width for each box */
+  height: 200px; /* Set a fixed height for each box */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.potential-client img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.potential-client:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.potential-client:hover .company-name,
+.potential-client:hover .company-description {
+  color: #a70202;
+}
+
+.potential-client h3.company-name {
+  font-size: 1rem;
+}
+.company-name {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) { 
+  /* bura */
+
+  .software-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+
+      .potential-client {
+        flex: 0 0 calc(50% - 10px);
+        margin: 5px;
+      }
+
+  /* //bura */
+  .potential-clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1>PROJECTS <span>.</span></h1> -->
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="blog.html">About</a></li>
+          <li><a href="about.html">registrations</a></li>
+          <!-- this upper part is legal navbar-->
+          
+          <!-- this upper is about  -->
+            
+         
+          <!-- <li><a href="services.html">Services</a></li> -->
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+           
+          </li>
+         
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2> KQ Consultancy LLC</h2>
+        <!-- <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Projects</li>
+        </ol> -->
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+<!-- about section -->
+<div id="text-container">
+    <h2>A warm welcome!</h2>
+    <p>Welcome to KQ Consultancy LLC in the UAE, your premier destination for top-notch civil
+        engineering solutions and expert consultants. Explore our
+        website to discover a world of innovative design, precise planning, and unparalleled expertise.</p>
+    <p>With a commitment to growth and a customer-centric approach, we aim to make a positive impact in
+        everything we do. Join us on our journey to success!</p>
+</div>
+<div class="about-section">
+    <h2 class="about-heading">About Us</h2>
+    <p class="about-text">
+        KQ Engineering Consultancy LLC stands as a premier integrated provider of engineering consultancy solutions, renowned for excellence in the field. With a strong foothold in the engineering consultancy services sector, our expertise sets us apart.
+        <br><br>
+        We possess an in-depth familiarity with the current International Building Code (IBC) requisites, in addition to our proficiency in earlier iterations and model building codes. Our team of engineers is actively engaged in their respective domains, upholding affiliations with esteemed professional and technical societies. Our commitment lies in furnishing our clientele with ingenious, secure, economically viable, and expeditious solutions to their structural quandaries.
+        <br><br>
+        The collective force of KQ Engineers and Consultants is dedicated to delivering tangible, value-enhancing outcomes to infrastructure and urban development undertakings across the Middle East.
+        <br><br>
+        
+    </p>
+   
+</div>
+
+<!-- Software section starts here -->
+<div class="software-section">
+  <h2 class="about-heading">Leading the Way with Cutting-Edge Software Solutions</h2>
+  <div class="software-grid">
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/lumion-3d-logo-948AF388BD-seeklogo.com.png" alt="Prokon">
+          <p class="software-name">Lumion</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/SketchUp-logo.png" alt="AutoCAD">
+          <p class="software-name">SketchUP</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/saaaaaaaaaaaaaaaaaaaaaaaa.webp" alt="SketchUp">
+          <p class="software-name">SAFE</p>
+      </div>
+      
+      
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/AutoCAD-.webp" alt="SAFE">
+          <p class="software-name">AutoCad</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/prokon-logo.png" alt="SAFE">
+          <p class="software-name">Prokon</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/etabs.webp" alt="SAFE">
+          <p class="software-name">E-TABS</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/staad.png" alt="SAFE">
+          <p class="software-name">STAAD</p>
+      </div>
+      <div class="software-item">
+          <img class="software-image" src="/assets/img/sap2000.png" alt="SAP2000">
+          <p class="software-name">SAP2000</p>
+      </div>
+      <!-- Add more software items as needed... -->
+  </div>
+</div>
+<!-- software section ends here -->
+
+
+<!-- Our Potential Clients section starts here -->
+<section class="potential-clients-section">
+  <div class="container">
+   
+    
+    <h2 class="section-title">Our Esteemed Clients</h2>
+    <div class="potential-clients-grid">
+      <div class="potential-client">
+        <img src="/assets/img/AGC_Logo.webp" alt="Company Logo">
+        <h3 class="company-name">Al Ghurair Centre</h3>
+        <!-- <p class="company-description">Description of the company...</p> -->
+      </div>
+      
+      <div class="potential-client">
+        <img src="assets/img/RIAZ.jpg" alt="Company 2">
+        <h3 class="company-name">RIAZ EDICAL CENTRE</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/TRICORE.png" alt="Company 2">
+        <h3 class="company-name">TRICORE Surfactants Technology Fzc</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/GOODY.jpg" alt="Company 2">
+        <h3 class="company-name">GOODY</p></h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/siddco.png" alt="Company 2">
+        <h3 class="company-name">SIDDCO</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/guyot.png" alt="Company 2">
+        <h3 class="company-name">GUYOT environment</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/mag.jpg" alt="Company 2">
+        <h3 class="company-name">MAG Lubricants</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/crystalpetro.png" alt="Company 2">
+        <h3 class="company-name">Crystal Petroleum</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/castaluminium.png" alt="Company 2">
+        <h3 class="company-name">Cast Aluminium Industries LLC</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/HEND.png" alt="Company 2">
+        <h3 class="company-name">HEND</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/dufry.jpg" alt="Company 2">
+        <h3 class="company-name">DUFRY</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/axax.jpg" alt="Company 2">
+        <h3 class="company-name">BOT</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/albahr.png" alt="Company 2">
+        <h3 class="company-name">AL BAHR AL ARABI MARINE & ENGINEERING</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/Copthorne-logo-DEF6DBEEBE-seeklogo.com.png" alt="Company 2">
+        <h3 class="company-name">COPHORNE HOTEL</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/alaska.jpg" alt="Company 2">
+        <h3 class="company-name">ALASKA INTERNATIONAL FZE</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/dahabshiil.jpg" alt="Company 2">
+        <h3 class="company-name">Dahabshiil</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/eo.jpg" alt="Company 2">
+        <h3 class="company-name">EO</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/emirates steel.jpg" alt="Company 2">
+        <h3 class="company-name">emirates steel</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/asia petrochem.jpg" alt="Company 2">
+        <h3 class="company-name">Asia Petrochem</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/ALBWARDY DAMEN.jpg" alt="Company 2">
+        <h3 class="company-name">ALBWARDY DAMEN</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/d.jpg" alt="Company 2">
+        <h3 class="company-name">DELTA INTERNATIONAL ENGINEERING LLC</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/KENZOL.jpg" alt="Company 2">
+        <h3 class="company-name">KENZOL</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/ats.png" alt="Company 2">
+        <h3 class="company-name">ATS</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/petrolube.png" alt="Company 2">
+        <h3 class="company-name">PETROLUBE</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/Sharjah_Airport_logo.svg.png" alt="Company 2">
+        <h3 class="company-name">SHARJAH Int. AIRPORT</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/logo-government-of-sharjah.webp" alt="Company 2">
+        <h3 class="company-name">Govt of Sharjah-Dept of eGov</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/1200px-Carrefour_logo.svg.png" alt="Company 2">
+        <h3 class="company-name">CarrefouR</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/ALSAUD.png" alt="Company 2">
+        <h3 class="company-name">AL SAUD Company LTD</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/CINEPO.png" alt="Company 2">
+        <h3 class="company-name">CINEPOLIS</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/SHARJAHMEDIA.jpg" alt="Company 2">
+        <h3 class="company-name">SHARJAH MEDIA CITY</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/UOSC.png" alt="Company 2">
+        <h3 class="company-name">UNITED OIL SUPPLY COMPANY</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/Bluehaus-Group-Primary-Logo-black-1-768x181.webp" alt="Company 2">
+        <h3 class="company-name">Bluehaus GrouP</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/THAR.svg" alt="Company 2">
+        <h3 class="company-name">Thar Oil Refinery FZC</h3>
+      </div>
+      <div class="potential-client">
+        <img src="assets/img/lamprell-logo-v1.jpg" alt="Company 2">
+        <h3 class="company-name">LAMPRELL </h3>
+      </div>
+      
+      <!-- Add more company items as needed... -->
+    </div>
+  </div>
+</section>
+<!-- Our Potential Clients section ends here -->
+
+
+
+
+
+
+    <!-- ======= Our Projects Section ======= -->
+   
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>KQ ENGINEERING CONSULTANCY LLC</h3>
+              <p>
+                PO.BOX 528, Office no 1704,  <br>
+                Al Marzooqui Tower C, King Faisal Road Sharjah-UAE.<br><br>
+                <strong>Phone:</strong> +971-6-553-3322<br>
+                <strong>Fax:</strong> +971-6-553-2552<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">About us</a></li>
+              <li><a href="about.html">Registrations</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="services-feed.html">Feed Engineering</a></li>
+              <li><a href="#">Detailed Engineering </a></li>
+              <li><a href="#">Submission of Drawings</a></li>
+              <li><a href="#">Tendering Process</a></li>
+              <li><a href="#">Project Management Control</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+        </div>
+    </div>
+  </div>
+         
+         
+
+      
+
+    
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
